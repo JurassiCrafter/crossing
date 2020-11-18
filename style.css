@@ -1,15 +1,30 @@
 body{
-  width: 100%;
-  height: 100%;
+  min-width: 100vw !important;
+  min-height: 100vh !important;
   margin: 0px;
+}
+
+h1{
+  color: #eeeeee;
+  font-family: sans-serif;
+  font-size: 180px;
+  margin: 0px;
+  padding-top: 60px;
 }
 
 h2{
   color: #eeeeee;
   font-family: sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   text-transform: uppercase;
   padding-top: 100px;
+}
+
+h3{
+  color: #eeeeee;
+  font-family: sans-serif;
+  font-size: 30px;
+  padding-top: 10px;
 }
 
 h6{
@@ -31,29 +46,11 @@ form{
 .fullScreen{
   width: 100%;
   height: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
-#welcomePage{
-  text-align: center;
-  background-size: 400% 400%;
-
-  -webkit-animation: Welcome 8s ease infinite;
-  -moz-animation: Welcome 8s ease infinite;
-  -o-animation: Welcome 8s ease infinite;
-  animation: Welcome 8s ease infinite;
-}
-
-#colorPage{
-  text-align: center;
-  background-size: 400% 400%;
-
-  -webkit-animation: Welcome 8s ease infinite;
-  -moz-animation: Welcome 8s ease infinite;
-  -o-animation: Welcome 8s ease infinite;
-  animation: Welcome 8s ease infinite;
-}
-
-#characterPage{
+.page{
   text-align: center;
   background-size: 400% 400%;
 
@@ -201,6 +198,19 @@ form{
   color: #eeeeee;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+#currentObstacle{
+  padding-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+}
+
+#currentObstacleDescription{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
 }
 
 @-webkit-keyframes Welcome {
