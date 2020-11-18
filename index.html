@@ -3,36 +3,37 @@
 <head>
     <title>The Crossing</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./scripts.js"></script>
 </head>
 <body>
     <div class="fullScreen">
-      <!--
+      
       <div id="welcomePage" class="page fullScreen darkGradient">
         <img id="welcomeLogo" class="logo" src="">
         <br>
-        <button id="startButton" class="button whiteButton darkText">Start</button>
+        <button id="startButton" class="button whiteButton darkText" onclick = 'welcomeButtonOnClick()'>Start</button>
       </div>
 
-      <div id="colorPage" class="page fullScreen darkGradient">
+      <div id="colorPage" class="page fullScreen darkGradient" style = 'display: none;'>
         <h2>Pick Your Color</h2>
         <div id="colorGallery">
           <div class="colorButtonRow">
-            <button id="pinkButton" class="colorButton pinkGradient"></button>
-            <button id="redButton" class="colorButton redGradient"></button>
-            <button id="orangeButton" class="colorButton orangeGradient"></button>
-            <button id="yellowButton" class="colorButton yellowGradient"></button>
+            <button id="pinkButton" class="colorButton pinkGradient" onclick = 'pinkButtonOnClick()'></button>
+            <button id="redButton" class="colorButton redGradient" onclick = 'redButtonOnClick()'></button>
+            <button id="orangeButton" class="colorButton orangeGradient" onclick = 'orangeButtonOnClick()'></button>
+            <button id="yellowButton" class="colorButton yellowGradient" onclick = 'yellowButtonOnClick()'></button>
           </div>
           <div class="colorButtonRow">
-            <button id="greenButton" class="colorButton greenGradient"></button>
-            <button id="blueButton" class="colorButton blueGradient"></button>
-            <button id="purpleButton" class="colorButton purpleGradient"></button>
-            <button id="blackButton" class="colorButton blackGradient"></button>
+            <button id="greenButton" class="colorButton greenGradient" onclick = 'greenButtonOnClick()'></button>
+            <button id="blueButton" class="colorButton blueGradient" onclick = 'blueButtonOnClick()'></button>
+            <button id="purpleButton" class="colorButton purpleGradient" onclick = 'purpleButtonOnClick()'></button>
+            <button id="blackButton" class="colorButton blackGradient" onclick = 'blackButtonOnClick()'></button>
           </div>
-          <button id="colorConfirmButton" class="button whiteButton darkText">Confirm</button>
+          <button id="colorConfirmButton" class="button whiteButton darkText" onclick = 'colorConfirmButtonOnClick()'>Confirm</button>
         </div>
       </div>
 
-      <div id="characterPage" class="page fullScreen darkGradient">
+      <div id="characterPage" class="page fullScreen darkGradient" style="display: none;">
         <h2>Create Your Character</h2>
         <form id="characterCreation">
           <h6>First Name</h6>
@@ -49,11 +50,11 @@
           <input id="animal" type="text" class="textInput"></input>
           <h6>Object</h6>
           <input id="object" type="text" class="textInput"></input>
-          <input id="characterConfirmButton" class="button whiteButton darkText" type="submit"></button>
+          <input id="characterConfirmButton" class="button whiteButton darkText" type="submit" onclick= 'characterConfirmButtonOnClick()'></button>
         </form>
       </div>
--->
-      <div id="mapPage" class="page fullScreen darkGradient">
+
+      <div id="mapPage" class="page fullScreen darkGradient" style="display: none;">
         <h2>Create An Obstacle</h2>
         <form id="mapCreation">
           <h6>Obstacle Name</h6>
@@ -64,7 +65,7 @@
         </form>
       </div>
 
-      <div id="timerPage" class="page fullScreen darkGradient">
+      <div id="timerPage" class="page fullScreen darkGradient" style = "display: none;">
         <!--This screen should show the obstacle in question,
         and should show a live timer at the top of the screen that starts
         at three minutes and then starts counting down.  When it hits
@@ -73,7 +74,7 @@
         it advances to the finalePage -->
       </div>
 
-      <div id="finalePage" class="page fullScreen darkGradient">
+      <div id="finalePage" class="page fullScreen darkGradient" style = 'display: none;'>
         <!--Should ask users each to input a number, and then sum those numbers.  The sum of those numbers
         is the number of random die they get to "roll" (generate random numbers)-->
       </div>
