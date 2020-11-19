@@ -1,25 +1,22 @@
-// Set the date we're counting down to
-var timerEnd = new Date().getTime() + 180,000;
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
-// Update the count down every 1 second
-var x = setInterval(function() {
 
-  // Get today's date and time
-  var now = new Date().getTime();
+        seconds = seconds < 10 ? "0" + seconds : seconds;
 
-  // Find the distance between now and the count down date
-  var distance = timerEnd - now;
+        display.textContent = minutes + ":" + seconds;
 
-  // Time calculations for days, hours, minutes and seconds
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
 
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = minutes + ":" + seconds;
-
-  // If the count down is finished....
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Timer done";
-  }
-}, 1000);
+window.onload = function () {
+    var threeMinutes = 60 * 3,
+        display = document.querySelector('#clock');
+    startTimer(threeMinutes, display);
+};

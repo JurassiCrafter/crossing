@@ -5,13 +5,12 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
-    <script src="timer.js"></script>
 </head>
 <body>
     <div class="fullScreen">
-      
+
       <div id="welcomePage" class="page fullScreen darkGradient">
-        <img id="welcomeLogo" class="logo" src="">
+        <img id="welcomeLogo" class="logo" src="public/logo.png">
         <br>
         <button id="startButton" class="button whiteButton darkText" onclick = 'welcomeButtonOnClick()'>Start</button>
       </div>
@@ -35,9 +34,9 @@
         </div>
       </div>
 
-      <div id="characterPage" class="page fullScreen darkGradient" style="display: none;">
+      <div id="characterPage" class="page fullScreen" style="display: none;">
         <h2>Create Your Character</h2>
-        <form id="characterCreation">
+        <div id="characterCreation" class="form">
           <h6>First Name</h6>
           <input id="firstName" type="text" class="textInput"></input>
           <h6>Last Name</h6>
@@ -52,36 +51,41 @@
           <input id="animal" type="text" class="textInput"></input>
           <h6>Object</h6>
           <input id="object" type="text" class="textInput"></input>
-          <input id="characterConfirmButton" class="button whiteButton darkText" type="submit" onclick= 'characterConfirmButtonOnClick()'></button>
-        </form>
+          <button id="characterConfirmButton" class="button whiteButton" onclick= 'characterConfirmButtonOnClick()'>Confirm</button>
+        </div>
       </div>
 
-      <div id="mapPage" class="page fullScreen darkGradient" style="display: none;">
+      <div id="mapPage" class="page fullScreen" style="display: none;">
         <h2>Create An Obstacle</h2>
-        <form id="mapCreation">
+        <div id="mapCreation" class="form">
           <h6>Obstacle Name</h6>
           <input id="obstacleName" type="text" class="textInput"></input>
           <h6>Obstacle Description</h6>
           <input id="obstacleDescription" type="text" class="textInput"></input>
-          <input id="mapConfirmButton" class="button whiteButton darkText" type="submit"></button>
-        </form>
+          <button id="mapConfirmButton" class="button whiteButton" onclick= 'mapConfirmButtonOnClick()'>Confirm</button>
+        </div>
       </div>
--->
-      <div id="timerPage" class="page fullScreen darkGradient">
+
+      <div id="timerPage" class="page fullScreen" style="display: none;">
         <h1 id="clock">3:00</h1>
-        <h2 id="currentObstacle">Mecha-Hitler</h2>
-        <h3 id="currentObstacleDescription">A modified version of Adolf Hitler with saw blades replacing his hands.</h3>
-        <!--This screen should show the obstacle in question,
-        and should show a live timer at the top of the screen that starts
-        at three minutes and then starts counting down.  When it hits
-        zero, the next obstacle is loaded in, and the timer restarts.
-        When there are no obstacles left, instead of resetting the timer,
-        it advances to the finalePage -->
+        <h2 id="currentObstacle"></h2>
+        <h3 id="currentObstacleDescription"></h3>
       </div>
 
       <div id="finalePage" class="page fullScreen darkGradient" style = 'display: none;'>
-        <!--Should ask users each to input a number, and then sum those numbers.  The sum of those numbers
-        is the number of random die they get to "roll" (generate random numbers)-->
+        <h2>Determine Your Outcome</h2>
+        <div id="finaleForm" class="form">
+          <h6># of Obstacles in Which All Players Participated</h6>
+          <input id="speakingPoints" type="number" max="5" class="textInput"></input>
+          <h6># of Players Who Used Their Objects</h6>
+          <input id="objectPoints" type="number" max="5" class="textInput"></input>
+          <h6># of Players Whose Strengths Were Revealed</h6>
+          <input id="strengthPoints" type="number" max="5" class="textInput"></input>
+          <h6># of Players Whose Weaknesses Were Revealed</h6>
+          <input id="weaknessPoints" type="number" max="5" class="textInput"></input>
+          <button id="finaleConfirmButton" class="button whiteButton darkText" onclick= 'finaleConfirmButtonOnClick()'>Confirm</button>
+        </div>
+        <h2 id="finaleResult"></h2>
       </div>
     </div>
 </body>
